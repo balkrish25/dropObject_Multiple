@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Object Sorting Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="scale-container">
+
+    <!-- SOUNDS -->
+    <audio id="startSound" src="./assets/game.mp3" preload="auto"></audio>
+    <audio id="homeSound" src="./assets/start.mp3" preload="auto"></audio>
+    <audio id="successSound" src="./assets/correct.mp3" preload="auto"></audio>
+    <audio id="failSound" src="./assets/wrong.mp3" preload="auto"></audio>
+
+    <!-- HOME PAGE -->
+    <section id="homePage" class="page active">
+      <div class="home-content">
+        <h1>Drop the objects in the right hole</h1>
+        <button id="startBtn">Start</button>
+      </div>
+
+      <div class="bottom-left-text">Prototype Content - Primary Level</div>
+
+      <div class="bottom-right-container">
+        <img src="./assets/default_logo.png" alt="Sample Image" class="bottom-right-image">
+        <div class="bottom-right-text">© CDAC, KP, Bangalore</div>
+      </div>
+    </section>
+
+    <!-- GAME PAGE -->
+    <section id="gamePage" class="page">
+      <header>
+        <h2>Drag the object and drop into the right hole</h2>
+        <img id="homeBtn" class="home-button" src="./assets/home.png" alt="Home">
+      </header>
+
+      <!-- Shelf for draggable objects -->
+      <div class="shelf">
+        <div class="visual-shelf"></div>
+
+        <div class="slot"><img src="./assets/beachball.png" class="object big-ball" data-target="big-circle"></div>
+        <div class="slot"><img src="./assets/woodruler.png" class="object wood-ruler" data-target="thin-rect"></div>
+        <div class="slot"><img src="./assets/10coin.png" class="object thin-coin" data-target="oval"></div>
+        <div class="slot"><img src="./assets/football.png" class="object football" data-target="big-circle"></div>
+        <div class="slot"><img src="./assets/pen.png" class="object pen" data-target="small-circle"></div>
+        <div class="slot"><img src="./assets/colorruler.png" class="object color-ruler" data-target="thin-rect"></div>
+        <div class="slot"><img src="./assets/1coin.png" class="object coin1" data-target="oval"></div>
+        <div class="slot"><img src="./assets/woodcube.png" class="object wood-cube" data-target="square"></div>
+        <div class="slot"><img src="./assets/plasticruler.png" class="object plastic-ruler" data-target="thin-rect">
+        </div>
+        <div class="slot"><img src="./assets/pencil.png" class="object pencil" data-target="small-circle"></div>
+        <div class="slot"><img src="./assets/5coin.png" class="object coin5" data-target="oval"></div>
+        <div class="slot"><img src="./assets/stick.png" class="object stick" data-target="small-circle"></div>
+        <div class="slot"><img src="./assets/plasticcube.png" class="object small-cube" data-target="square"></div>
+      </div>
+
+      <!-- Holes for dropping -->
+      <div class="holes-box">
+        <div class="hole square" data-shape="square"></div>
+        <div class="hole oval" data-shape="oval"></div>
+        <div class="hole small-circle" data-shape="small-circle"></div>
+        <div class="hole thin-rect" data-shape="thin-rect"></div>
+        <div class="hole big-circle" data-shape="big-circle"></div>
+      </div>
+    </section>
+
+    <!-- FINAL PAGE -->
+    <section id="finalPage" class="page">
+      <header>
+        <img id="homeBtnFinal" class="home-button" src="./assets/home.png" alt="Home">
+      </header>
+
+      <div class="final-content">
+        <img src="./assets/good.png" alt="Congratulations!" class="congrats-image">
+        <button id="playAgainBtn">Play Again</button>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
